@@ -1,0 +1,143 @@
+.banner {
+  position: relative;
+  background: url('../assets/banner.jpeg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content {
+  max-width: 800px;
+  margin: auto;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.banner h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  color: #ffc107;
+  position: relative;
+}
+
+.trust-badges div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  cursor: default;
+}
+
+.trust-badges div:hover::after {
+  content: 'Verified by SA Locksmiths Association';
+  position: absolute;
+  background: #ffc107;
+  color: #343a40;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  top: -30px;
+  white-space: nowrap;
+}
+
+.cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.cta-btn {
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn.primary {
+  background-color: #ffc107;
+  color: #343a40;
+}
+
+.cta-btn.secondary {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.cta-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .banner-overlay {
+    padding: 2rem 1rem;
+  }
+
+  .features li,
+  .trust-badges div {
+    flex-direction: column;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .cta-group {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+}

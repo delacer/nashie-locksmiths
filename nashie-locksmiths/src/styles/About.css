@@ -1,0 +1,149 @@
+.about-page {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+.about-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-intro h2 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.about-tagline {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+}
+
+.about-banner {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  margin: auto;
+}
+
+.about-values {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-values h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.about-features {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.about-features li {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.about-features li:hover {
+  transform: translateY(-4px);
+}
+
+.about-features svg {
+  font-size: 1.5rem;
+  color: #ffc107;
+}
+
+.about-story {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-story h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.about-story p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* AOS animation support */
+[data-aos] {
+  transition-property: transform, opacity;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .about-page {
+    padding: 2rem 1rem;
+  }
+
+  .about-intro h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-values h3,
+  .about-story h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story p {
+    font-size: 0.95rem;
+  }
+}
+.about-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.about-cta h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
