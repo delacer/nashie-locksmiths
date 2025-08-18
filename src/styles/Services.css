@@ -1,3 +1,4 @@
+/* Page layout */
 .services-page {
   padding: 4rem 2rem;
   background-color: #f8f9fa;
@@ -19,6 +20,7 @@
 .services-tagline {
   font-size: 1rem;
   color: #6c757d;
+  margin-top: 0.5rem;
 }
 
 /* Service Grid */
@@ -74,11 +76,16 @@
     font-size: 1.6rem;
   }
 
+  .services-tagline {
+    font-size: 0.95rem;
+  }
+
   .services-cta h3 {
     font-size: 1.2rem;
   }
 
   .cta-btn {
     width: 100%;
+    text-align: center;
   }
 }

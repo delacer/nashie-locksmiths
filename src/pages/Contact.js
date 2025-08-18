@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import '../styles/Contact.css';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import AOS from 'aos';
@@ -61,7 +62,13 @@ const Contact = () => {
   };
 
   return (
+    <HelmetProvider>
     <>
+       <Helmet>
+          <title>Contact Nashie Locksmiths | Book a Car Key Service</title>
+          <meta name="description" content="Need help with your car key? Contact Nashie Locksmiths for fast, mobile service across Western Cape." />
+          <meta name="keywords" content="contact locksmith, book car key service, Nashie Locksmiths, mobile locksmith, Western Cape" />
+        </Helmet>
       <Header />
       <main className='contact-page'>
         {/* Contact Info */}
@@ -95,8 +102,7 @@ const Contact = () => {
           ></iframe>
         </section>
 
-        {/* Contact Form */}
-        <section className='contact-form' data-aos='fade-up'>
+        <section className='contact-form' id='contact-form' data-aos='fade-up'>
           <h3>Send Us a Message</h3>
           <form onSubmit={handleSubmit} autoComplete='on' aria-label='Contact form'>
             <label htmlFor='fname'>First Name</label>
@@ -150,7 +156,6 @@ const Contact = () => {
           </form>
         </section>
 
-        {/* Call CTA */}
         <section className='contact-cta' data-aos='fade-up'>
           <h3>Need Help Right Now?</h3>
           <a href='tel:+27604971899' className='cta-btn'>Call Us</a>
@@ -158,6 +163,7 @@ const Contact = () => {
       </main>
       <Footer />
     </>
+    </HelmetProvider>
   );
 };
 

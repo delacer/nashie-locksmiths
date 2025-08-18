@@ -1,0 +1,145 @@
+/* Page layout */
+.reviews-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Review form */
+.review-form {
+  background: #f8f8f8;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.review-form h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.review-form input,
+.review-form textarea,
+.review-form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.review-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.review-form button {
+  background: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.review-form button:hover {
+  background: #0056b3;
+}
+
+/* Verified checkbox */
+.verified-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Review filter dropdown */
+.review-filter {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.review-filter label {
+  font-weight: 500;
+}
+
+/* Review list */
+.review-list {
+  margin-top: 2rem;
+}
+
+.review-list h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.review-card {
+  background: #ffffff;
+  border: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+}
+
+.review-card strong {
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.review-card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.review-card small {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* Star rating */
+.star-rating {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0.5rem 0;
+}
+
+.star {
+  font-size: 1.2rem;
+}
+
+.star.filled {
+  color: #f5a623;
+}
+
+.star.half {
+  color: #f5a623;
+}
+
+.star.empty {
+  color: #ccc;
+}
+
+/* Verified Client badge */
+.verified-badge {
+  background: #28a745;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}

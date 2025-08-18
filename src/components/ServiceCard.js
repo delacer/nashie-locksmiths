@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/ServiceCard.css';
 import { FaKey, FaTools, FaCarSide, FaArrowRight } from 'react-icons/fa';
 
-const ServiceCard = ({ title, image, description }) => {
+const ServiceCard = ({ title, image, description, link }) => {
   const getIcon = () => {
     if (title.includes('Programming')) return <FaKey className='service-icon' />;
     if (title.includes('Cutting')) return <FaTools className='service-icon' />;
@@ -22,7 +22,7 @@ const ServiceCard = ({ title, image, description }) => {
           <h3 className='card-title'>{title}</h3>
         </div>
         <p className='card-description'>{description}</p>
-        <a href='/contact' className='card-cta'>
+        <a href={link} className='card-cta'>
           Learn More <FaArrowRight />
         </a>
       </div>

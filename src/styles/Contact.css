@@ -1,9 +1,11 @@
+/* Page layout */
 .contact-page {
   padding: 4rem 2rem;
   background-color: #f8f9fa;
   color: #343a40;
 }
 
+/* Contact info section */
 .contact-info {
   text-align: center;
   margin-bottom: 3rem;
@@ -29,6 +31,7 @@
   align-items: center;
 }
 
+/* Icons and WhatsApp */
 .contact-icon {
   margin-right: 0.5rem;
   color: #ffc107;
@@ -47,6 +50,12 @@
 .whatsapp-link:hover {
   text-decoration: underline;
 }
+
+/* Contact form section */
+.contact-form-section {
+  margin-bottom: 3rem;
+}
+
 .contact-form {
   max-width: 600px;
   margin: auto;
@@ -104,6 +113,7 @@
   transform: translateY(-2px);
 }
 
+/* CTA section */
 .contact-cta {
   text-align: center;
   margin-top: 3rem;
@@ -131,12 +141,26 @@
   transform: translateY(-2px);
 }
 
+/* Map section */
+.contact-map {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.contact-map h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+/* AOS transitions */
 [data-aos] {
   transition-property: transform, opacity;
   transition-duration: 0.6s;
   transition-timing-function: ease;
 }
 
+/* Responsive */
 @media (max-width: 600px) {
   .contact-page {
     padding: 2rem 1rem;
@@ -151,21 +175,13 @@
   }
 
   .contact-form h3,
-  .contact-cta h3 {
+  .contact-cta h3,
+  .contact-map h3 {
     font-size: 1.2rem;
   }
 
   .cta-btn {
     width: 100%;
+    text-align: center;
   }
-}
-.contact-map {
-  margin-top: 3rem;
-  text-align: center;
-}
-
-.contact-map h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  color: #343a40;
 }

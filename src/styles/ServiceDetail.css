@@ -1,0 +1,43 @@
+.service-detail {
+  padding: 2rem;
+}
+
+.service-hero {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.service-hero img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-info li::before {
+  content: "✔️ ";
+  margin-right: 0.5rem;
+}
+
+.service-cta {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.cta-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
