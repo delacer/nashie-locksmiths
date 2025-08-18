@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nashie-locksmiths.netlify.app/sitemap.xml

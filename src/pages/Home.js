@@ -5,6 +5,10 @@ import Banner from '../components/Banner'
 import Footer from '../components/Footer';
 import ServiceCard from '../components/ServiceCard';
 import Testimonial from '../components/Testimonial';
+import progImg from '../assets/prog.jpeg';
+import cutImg from '../assets/cutt.jpeg';
+import repImg from '../assets/rep.jpeg';
+
 import '../styles/Home.css';
 
 const Home = () => {
