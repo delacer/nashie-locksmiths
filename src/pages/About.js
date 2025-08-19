@@ -43,7 +43,7 @@ const About = () => {
         </section>
         <section className='about-cta' data-aos='fade-up'>
           <h3>Ready to Get Started?</h3>
-          <a href='/contact' className='cta-btn'>Book Now</a>
+          <a href='/contact#contact-form' className='cta-btn'>Book Now</a>
        </section>
 
       </main>

@@ -3,9 +3,10 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/ServiceDetail.css';
 import progImg from '../assets/prog.jpeg';
-import { FaMicrochip, FaCarSide, FaBolt, FaCheckCircle } from 'react-icons/fa';
+import { FaMicrochip, FaCarSide, FaBolt, FaCheckCircle, FaStar, FaShieldAlt } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet-async';
 
 const Programming = () => {
   useEffect(() => {
@@ -14,6 +15,12 @@ const Programming = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Key Programming | Nashie Locksmiths</title>
+        <meta name="description" content="Smart key programming for modern vehicles. Fast, secure, and mobile service across Western Cape." />
+        <meta name="keywords" content="key programming, transponder key, immobilizer sync, mobile locksmith, Nashie Locksmiths, Western Cape" />
+      </Helmet>
+
       <Header />
       <main className="service-detail">
         {/* Hero Section */}
@@ -24,6 +31,10 @@ const Programming = () => {
               <div className="hero-text">
                 <h2>Key Programming</h2>
                 <p>Smart keys, synced fast. Get back on the road with precision programming for modern vehicles.</p>
+                <div className="trust-badges">
+                  <span><FaShieldAlt /> Certified Technicians</span>
+                  <span><FaStar /> 5-Star Rated Service</span>
+                </div>
               </div>
             </div>
           </div>
@@ -46,10 +57,21 @@ const Programming = () => {
           <p>We use advanced diagnostic tools to ensure your key communicates securely with your vehicle. No towing, no delays — just fast, trusted service. Our technicians are trained on the latest systems, ensuring compatibility and reliability across brands.</p>
         </section>
 
+        {/* Testimonial Preview */}
+        <section className="testimonial-preview" data-aos="fade-up">
+          <blockquote>
+            “Nashie Locksmiths programmed my smart key in minutes. No dealership delays, no stress. Highly recommended!”
+          </blockquote>
+          <p className="review-author">— Thando K., Bellville</p>
+        </section>
+
         {/* CTA */}
         <section className="service-cta" data-aos="zoom-in">
           <h3>Ready to Program Your Key?</h3>
-          <a href="/contact#contact-form" className="cta-btn">Book Now</a>
+          <a href="/contact#contact-form" className="cta-btn">
+            <FaBolt style={{ marginRight: '8px' }} />
+            Book Now
+          </a>
         </section>
       </main>
       <Footer />

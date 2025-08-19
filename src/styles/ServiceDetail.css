@@ -3,6 +3,7 @@
   padding: 3rem 2rem;
   background-color: #fdfdfd;
   color: #343a40;
+  font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Hero Section */
@@ -16,28 +17,64 @@
   margin-bottom: 3rem;
 }
 
-.service-hero img {
+.hero-image-wrapper {
+  position: relative;
   width: 100%;
   max-width: 500px;
+}
+
+.hero-image {
+  width: 100%;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   object-fit: cover;
 }
 
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
 .hero-text {
-  max-width: 600px;
+  color: #fff;
   text-align: center;
+  max-width: 600px;
 }
 
 .hero-text h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #007bff;
+  color: #ffc107;
 }
 
 .hero-text p {
   font-size: 1.2rem;
-  color: #6c757d;
+  color: #f1f1f1;
+}
+
+/* Trust Badges */
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #ffc107;
+}
+
+.trust-badges span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* Info Section */
@@ -49,6 +86,9 @@
   font-size: 1.6rem;
   margin-bottom: 1rem;
   color: #007bff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .service-info ul {
@@ -80,12 +120,41 @@
   font-size: 1.6rem;
   margin-bottom: 1rem;
   color: #007bff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .service-benefits p {
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
+}
+
+/* Testimonial Preview */
+.testimonial-preview {
+  background-color: #ffffff;
+  border-left: 4px solid #ffc107;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+  color: #444;
+}
+
+.testimonial-preview blockquote {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.review-author {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #007bff;
+  text-align: right;
 }
 
 /* CTA Section */
@@ -104,11 +173,14 @@
   background-color: #007bff;
   color: white;
   padding: 14px 28px;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .cta-btn:hover {
@@ -140,5 +212,15 @@
 
   .cta-btn {
     width: 100%;
+    justify-content: center;
+  }
+
+  .trust-badges {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .testimonial-preview {
+    margin: 2rem 1rem;
   }
 }

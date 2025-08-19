@@ -33,7 +33,7 @@ const Banner = () => {
           </div>
 
           <div className='cta-group'>
-            <a href='/contact' className='cta-btn primary'>Book a Service</a>
+            <a href='/contact#contact-form' className='cta-btn primary'>Book a Service</a>
             <a href='/about' className='cta-btn secondary'>Learn More</a>
           </div>
         </div>

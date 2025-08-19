@@ -3,9 +3,10 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/ServiceDetail.css';
 import repImg from '../assets/rep.jpeg';
-import { FaKey, FaTools, FaBolt, FaCheckCircle } from 'react-icons/fa';
+import { FaKey, FaTools, FaBolt, FaCheckCircle, FaStar, FaShieldAlt } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet-async';
 
 const Replacement = () => {
   useEffect(() => {
@@ -14,6 +15,12 @@ const Replacement = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Key Replacement | Nashie Locksmiths</title>
+        <meta name="description" content="Lost your car key or remote? Nashie Locksmiths offers fast, mobile key replacement across Western Cape." />
+        <meta name="keywords" content="key replacement, car key lost, remote repair, mobile locksmith, Nashie Locksmiths, Western Cape" />
+      </Helmet>
+
       <Header />
       <main className="service-detail">
         {/* Hero Section */}
@@ -24,6 +31,10 @@ const Replacement = () => {
               <div className="hero-text">
                 <h2>Key Replacement</h2>
                 <p>Lost your key? Broken remote? We’ll replace it fast — no towing, no stress.</p>
+                <div className="trust-badges">
+                  <span><FaShieldAlt /> Certified Locksmiths</span>
+                  <span><FaStar /> 5-Star Rated Service</span>
+                </div>
               </div>
             </div>
           </div>
@@ -46,10 +57,21 @@ const Replacement = () => {
           <p>We specialize in fast key replacement for all major car brands. Our mobile team comes to you — saving time, money, and hassle. Trusted by hundreds across Western Cape, we deliver peace of mind with every key.</p>
         </section>
 
+        {/* Testimonial Preview */}
+        <section className="testimonial-preview" data-aos="fade-up">
+          <blockquote>
+            “I lost my car key at the mall. Nashie Locksmiths arrived in 30 minutes and had me driving again in no time. Incredible service!”
+          </blockquote>
+          <p className="review-author">— Lerato N., Mitchells Plain</p>
+        </section>
+
         {/* CTA */}
         <section className="service-cta" data-aos="zoom-in">
           <h3>Need a Replacement Right Now?</h3>
-          <a href="/contact#contact-form" className="cta-btn">Book Now</a>
+          <a href="/contact#contact-form" className="cta-btn">
+            <FaBolt style={{ marginRight: '8px' }} />
+            Book Now
+          </a>
         </section>
       </main>
       <Footer />
