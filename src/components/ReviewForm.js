@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaStar, FaUser, FaCommentDots, FaCheckCircle } from 'react-icons/fa';
 
 const ReviewForm = ({ onAddReview }) => {
   const [name, setName] = useState('');
@@ -26,35 +27,56 @@ const ReviewForm = ({ onAddReview }) => {
   };
 
   return (
-    <form className="review-form" onSubmit={handleSubmit}>
-      <h3>Leave a Review</h3>
-      <input
-        type="text"
-        placeholder="Your name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-      />
-      <select value={rating} onChange={(e) => setRating(Number(e.target.value))}>
-        {[5, 4, 3, 2, 1].map((r) => (
-          <option key={r} value={r}>{r} Stars</option>
-        ))}
-      </select>
-      <textarea
-        placeholder="Your experience..."
-        value={comment}
-        onChange={(e) => setComment(e.target.value)}
-        required
-      />
+    <form className="review-form" onSubmit={handleSubmit} data-aos="fade-up">
+      <h3>Share Your Experience</h3>
+      <p className="form-subtext">Your feedback helps others trust Nashie Locksmiths.</p>
+
+      <div className="form-group">
+        <label htmlFor="name"><FaUser /> Name</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="e.g. Thabo M."
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="rating"><FaStar /> Rating</label>
+        <select
+          id="rating"
+          value={rating}
+          onChange={(e) => setRating(Number(e.target.value))}
+        >
+          {[5, 4, 3, 2, 1].map((r) => (
+            <option key={r} value={r}>{r} Stars</option>
+          ))}
+        </select>
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="comment"><FaCommentDots /> Review</label>
+        <textarea
+          id="comment"
+          placeholder="Tell us what stood out..."
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
+          required
+        />
+      </div>
+
       <label className="verified-checkbox">
         <input
           type="checkbox"
           checked={isVerified}
           onChange={(e) => setIsVerified(e.target.checked)}
         />
-        Verified Client
+        <FaCheckCircle /> Verified Client
       </label>
-      <button type="submit">Submit Review</button>
+
+      <button type="submit" className="submit-btn">Submit Review</button>
     </form>
   );
 };

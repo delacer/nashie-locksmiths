@@ -1,22 +1,54 @@
+/* Page layout */
 .service-detail {
-  padding: 2rem;
+  padding: 3rem 2rem;
+  background-color: #fdfdfd;
+  color: #343a40;
 }
 
+/* Hero Section */
 .service-hero {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
-  margin-bottom: 2rem;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 
 .service-hero img {
-  width: 300px;
-  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+}
+
+.hero-text {
+  max-width: 600px;
+  text-align: center;
 }
 
 .hero-text h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+/* Info Section */
+.service-info {
+  margin-bottom: 2rem;
+}
+
+.service-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #007bff;
 }
 
 .service-info ul {
@@ -24,20 +56,89 @@
   padding: 0;
 }
 
-.service-info li::before {
-  content: "✔️ ";
-  margin-right: 0.5rem;
+.service-info li {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
 }
 
+.service-info li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Benefits Section */
+.service-benefits {
+  margin-bottom: 2rem;
+}
+
+.service-benefits h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.service-benefits p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* CTA Section */
 .service-cta {
-  margin-top: 2rem;
   text-align: center;
+  margin-top: 3rem;
+}
+
+.service-cta h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #343a40;
 }
 
 .cta-btn {
   background-color: #007bff;
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: bold;
   text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* AOS animation support */
+[data-aos] {
+  transition-property: transform, opacity;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    width: 100%;
+  }
 }
